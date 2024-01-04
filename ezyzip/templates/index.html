@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Chat Bot</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/static/style.css">
+    <link rel="stylesheet" href="https://unpkg.com/tailwindcss@^1.0/dist/tailwind.min.css">
+    <!--========== BOX ICONS ==========-->
+    <link href='https://cdn.jsdelivr.net/npm/boxicons@2.0.5/css/boxicons.min.css' rel='stylesheet'>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <!--========== SCROLL TOP ==========-->
+    <a href="#" class="scrolltop" id="scroll-top"> <i class='bx bx-chevron-up scrolltop__icon'></i> </a>
+    <!--========== HEADER ==========-->
+    <header class="l-header" id="header">
+        <nav class="nav bd-container">
+            <a href="#" class="nav__logo">Mental Health Chatbot</a>
+                <div class="nav__menu" id="nav-menu">
+                    <ul class="nav__list">
+                        <li class="nav__item"><a class="nav__link" onclick="openForm()">Ask questions to chatbot</a></li>
+                        <li class="nav__item"><a class="nav__link" href="{{ url_for('you') }}" target="_blank">Youtube link</a></li>
+                        <li class="nav__item"><a class="nav__link" href="{{ url_for('doc') }}" target="_blank">Doctor link</a></li>
+                    </ul>
+                </div>
+                <div class="nav__toggle" id="nav-toggle">
+                    <i class='bx bx-menu'></i>
+                </div>
+            </nav>
+        </header>
+        <!--========== HEADER ==========-->
+    <main class="l-main">
+        <!--========== HOME ==========-->
+            <section class="home" id="home">
+                <div class="home__container bd-container bd-grid">
+                    <div class="home__data">
+                        <h1 class="home__title">Mind Mate</h1>
+                        <h2 class="home__subtitle">How can we help you?</h2>
+                        <p class="about__description">Our team is eager to assist you.</p>
+                    </div>
+                    <div>
+                    <iframe width="560" height="315" src="https://www.youtube.com/embed/L_4BPjLBF4E" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+                    <img src="https://verloop.io/wp-content/uploads/11-Oct-2022-1200x600.jpg" alt="" class="home__img">
+                    </div>
+                </div>
+            </section>
+            <!--========== SERVICES ==========-->
+            <section class="services section bd-container" id="services">
+                <span class="section-subtitle">Our Chatbot Feature</span>
+                <h2 class="section-title">Our Chatbot Feature</h2>
+                <div class="services__container  bd-grid">
+                    <div class="services__content">
+                        <img src="{{ image3 }}" alt="" class="menu__img">
+                        <h3 class="services__title">Easy To Use</h3>
+                        <p class="services__description">We provide a simple user interface that makes it easy for users to interact with our chatbot.</p>
+                    </div>
+                    <div class="services__content">
+                        <img src="{{ image1 }}" alt="" class="menu__img">
+                        <h3 class="services__title">24 * 7 Support</h3>
+                        <p class="services__description">Our chatbot is available 24 hours a day, 7 days a week. Let our chatbot assist you with your queries.</p>
+                    </div>
+                </div>
+            </section>
+            <!--========== ABOUT ==========-->
+            <section class="about section bd-container" id="about">
+                <div class="about__container  bd-grid">
+                    <div class="about__data">
+                        <h2 class="section-title about__initial">About us</h2>
+                        <p class="about__description">.</p>
+                        <p class="about__description">.</p>
+                    </div>
+                    <img src="{{ maintenance }}" alt="" class="about__img">
+                </div>
+            </section>
+            <!--========== CONTACT US ==========-->
+            <section class="contact section bd-container" id="contact">
+                <div class="contact__container bd-grid">
+                    <div class="contact__data">
+                        <span class="section-subtitle contact__initial">Have a Question?</span>
+                        <h2 class="section-title contact__initial">Contact Us</h2>
+                        <p class="contact__description">We are ready to help 24*7 </p>
+                    </div>
+                    <div class="contact__button">
+                        <a href="mailto:team@opengenus.org" class="button">Contact us now</a>
+                    </div>
+                </div>
+            </section>
+        </main>
+        <!--========== FOOTER ==========-->
+        <footer class="footer section bd-container">
+            <div class="footer__container bd-grid">
+                <div class="footer__content">
+                    <a href="#" class="footer__logo">Mental Health Chatbot</a>
+                    <span class="footer__description">Project School Project</span>
+                    <div>
+                        <a href="https://twitter.com/opengenus" class="footer__social"><i class='fa fa-twitter'></i></a>
+                        <a href="https://github.com/opengenus" class="footer__social"><i class='bx bxl-github'></i></a>
+                        <a href="https://www.linkedin.com/company/opengenus" class="footer__social"><i class='bx bxl-linkedin'></i></a>
+
+                    </div>
+                </div>
+                <div class="footer__content">
+                    <h3 class="footer__title">Our Services</h3>
+                    <ul>
+                        <li><a href="https://github.com/OpenGenus/cosmos-search" class="footer__link">Search Engine</a></li>                    
+                    </ul>
+                </div>
+                <div class="footer__content">
+                    <h3 class="footer__title">About Us</h3>
+                    <ul> 
+                     <p class="about__description">.</p>
+                    </ul>
+                </div>
+            </div>
+            <p class="footer__copy">&#169; Mental Health Chatbot </p>
+        </footer>
+        <!--========== SCROLL REVEAL ==========-->
+        <script src="{{url_for('static', filename='main.js')}}"></script>
+        <script src="https://unpkg.com/scrollreveal"></script>
+        <!--<script type="text/javascript" src="script.js"></script>-->
+        <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+        <script src="{{url_for('static', filename='flowchat.js')}}"></script>
+        <script src="{{url_for('static', filename='flowchatui.js')}}"></script>
+        
+        
+        
+<button class="openChatBtn" onclick="openForm()">Open Chatbot</button>
+<!--<div class="openChat">
+<form>
+<h1>Chat</h1>
+<label for="msg"><b>Message</b></label>
+<textarea placeholder="Type message.." name="msg" required></textarea>
+<button type="submit" class="btn">Send</button>
+<button type="button" class="btn close" onclick="closeForm()">
+Close
+</button>
+</form>
+</div>-->
+
+
+    <div id="box">
+    <form id="chat-form">
+        <input type="text" name="message" id="message-input" placeholder="Type your message here...">
+        <button type="submit">Send</button>
+    </form>
+    <div id="chat-box"></div>
+    <button type="button" class="btn close" onclick="closeForm()">
+        Close Chatbot
+    </button>
+    </div>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script>
+         document .querySelector(".openChatBtn") .addEventListener("click", openForm);
+   document.querySelector(".close").addEventListener("click", closeForm);
+   function openForm() {
+      document.querySelector("#box").style.display = "block";
+      document.querySelector(".openChatBtn").style.display = "none";
+   }
+   function closeForm() {
+      document.querySelector("#box").style.display = "none";
+      document.querySelector(".openChatBtn").style.display = "block";
+   }
+
+
+        $(document).ready(function() {
+            $('#chat-form').submit(function(event) {
+                event.preventDefault();
+                var message = $('#message-input').val();
+                $.ajax({
+                    type: 'POST',
+                    url: 'http://127.0.0.1:5000',
+                    contentType: 'application/json',
+                    data: JSON.stringify({'message': message}),
+                    success: function(response) {
+                        $('#chat-box').append('<p><strong>You:</strong> ' + message + '</p>');
+                        $('#chat-box').append('<p><strong>Bot:</strong> ' + response.response + '</p>');
+                        $('#message-input').val('');
+                        
+                        $('#chat-box').scrollTop($('#chat-box')[0].scrollHeight);
+                    },
+                    error: function(xhr, status, error) {
+                        console.error(xhr);
+                    }
+                });
+            });
+        });
+    </script>
+    <!--<script src="/js/script.js"></script>-->
+</body>
+</html>
