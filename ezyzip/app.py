@@ -4,7 +4,7 @@ PEOPLE_FOLDER = os.path.join('static', 'img')
 app = Flask(__name__)
 app.config['UPLOAD_FOLDER'] = PEOPLE_FOLDER
 
-openai.api_key = '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'
+openai.api_key = ''
 
 @app.route('/', methods=['GET', 'POST'])
 def index():
